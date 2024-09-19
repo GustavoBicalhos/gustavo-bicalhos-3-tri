@@ -4,14 +4,6 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const nomes = ["Ana", "Fernanda", "Maria Eduarda",
-"Marcelo", "Amanda", "Gustavo", "Gabriel"];
-
-export function aleatorio (lista){
-const posicao = Math.floor(Math.random()* lista.length);
-return lista[posicao];
-}
-
 import { aleatorio, nome } from './aleatorio.js';
 
 export const nome = aleatorio(nomes);
