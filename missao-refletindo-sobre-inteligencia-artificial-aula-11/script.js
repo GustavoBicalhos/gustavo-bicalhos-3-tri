@@ -4,6 +4,27 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
+const nomes = [“Ana”, “Fernanda”, “Maria Eduarda”,
+“Marcelo”, “Amanda”, “Gustavo”, “Gabriel”];
+
+export function aleatorio (lista){
+const posicao = Math.floor(Math.random()* lista.length);
+return lista[posicao];
+}
+
+import { aleatorio, nome } from './aleatorio.js';
+
+export const nome = aleatorio(nomes);
+function mostraResultado() {
+    caixaPerguntas.textContent = `Em 2049, ${nome}`;
+}
+function substituiNome() {
+    for (const pergunta of perguntas) {
+    pergunta.enunciado = pergunta.enunciado.replace(/você/g,
+    nome);
+        }
+        }
+
 const perguntas = [
     {
         enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
