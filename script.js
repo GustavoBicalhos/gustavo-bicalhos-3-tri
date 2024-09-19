@@ -4,8 +4,8 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-const nomes = [“Ana”, “Fernanda”, “Maria Eduarda”,
-“Marcelo”, “Amanda”, “Gustavo”, “Gabriel”];
+const nomes = ["Ana", "Fernanda", "Maria Eduarda",
+"Marcelo", "Amanda", "Gustavo", "Gabriel"];
 
 export function aleatorio (lista){
 const posicao = Math.floor(Math.random()* lista.length);
