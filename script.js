@@ -3,19 +3,27 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+// script.js
 
+// Importando a função aleatorio e o nome aleatório do arquivo aleatorio.js
 import { aleatorio, nome } from './aleatorio.js';
 
-export const nome = aleatorio(nomes);
+// Função que mostra o resultado
 function mostraResultado() {
     caixaPerguntas.textContent = `Em 2049, ${nome}`;
 }
+
+// Função que substitui "você" pelo nome aleatório nas perguntas
 function substituiNome() {
     for (const pergunta of perguntas) {
-    pergunta.enunciado = pergunta.enunciado.replace(/você/g,
-    nome);
-        }
-        }
+        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+    }
+}
+
+// Chama a função substituiNome antes de mostrar a pergunta
+substituiNome();
+mostraPergunta();
+
 
 const perguntas = [
     {
